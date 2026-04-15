@@ -8,7 +8,7 @@ RoKo ist ein Korpus deutschsprachiger Romane aus dem Zeitraum 1790–1915. Es wu
 
 | Datei/Ordner | Beschreibung |
 |---|---|
-| `metadaten.xlsx` | Metadaten zu allen 1.975 Einträgen |
+| `metadaten.csv` | Metadaten zu allen 1.975 Einträgen (UTF-8, Komma-separiert) |
 | `texts/` | Volltexte als `.txt`-Dateien (UTF-8), Dateiname = `werk_id` |
 
 ---
@@ -111,9 +111,9 @@ Die Zahl der Texte steigt über den Untersuchungszeitraum an, mit einem deutlich
 
 ---
 
-## Metadaten (`gesamtkorpus_bereinigt.xlsx`)
+## Metadaten (`metadaten.csv`)
 
-Die Metadatendatei enthält im Moment eine Zeile pro Textdatei (Eintrag) mit folgenden Spalten:
+Die Metadatendatei enthält eine Zeile pro Textdatei (Eintrag) mit folgenden Spalten:
 
 | Spalte | Beschreibung |
 |---|---|
@@ -121,8 +121,6 @@ Die Metadatendatei enthält im Moment eine Zeile pro Textdatei (Eintrag) mit fol
 | `basis` | Quellbestand (DeCorp, TextGrid, GB-Ergänzung, GB, Bildungsroman) |
 | `teilkorpus` | `Kernkorpus` oder `Erweiterungskorpus` |
 | `gnd_pref_name` | GND-Normname der Autorin/des Autors |
-| `author_last` | Nachname |
-| `author_first` | Vorname |
 | `gnd_id` | GND-ID der Autorin/des Autors |
 | `title` | Werktitel (Originalschreibung) |
 | `title_normalisiert` | Normalisierter Werktitel (ohne Bandangabe) |
@@ -132,7 +130,7 @@ Die Metadatendatei enthält im Moment eine Zeile pro Textdatei (Eintrag) mit fol
 | `year_source` | Quelle der Jahresangabe (wenn manuell korrigiert) |
 | `n_tokens` | Tokenanzahl inkl. Interpunktion (spaCy `de_core_news_sm`) |
 | `n_tokens_no_punct` | Tokenanzahl ohne Interpunktionszeichen |
-| `gnd_gender` | Originalwert aus der GND |
+| `gnd_gender` | Gender laut GND (`m` = männlich, `w`/`f` = weiblich) |
 | `gnd_birth_year` | Geburtsjahr laut GND |
 | `gnd_death_year` | Todesjahr laut GND |
 | `gnd_geo` | Geografischer Bezug laut GND |
@@ -164,7 +162,7 @@ Wenn Sie RoKo in Ihrer Forschung verwenden, zitieren Sie bitte:
 
 ## Lizenz
 
-Die Metadaten (`gesamtkorpus_bereinigt.xlsx`) stehen unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Die Volltexte unterliegen den jeweiligen Lizenzbedingungen der Quellbestände. Texte aus Project Gutenberg-US und Projekt Gutenberg-DE sind gemeinfrei oder unter der Project Gutenberg License verfügbar; TextGrid-Texte stehen unter CC BY 3.0. Für Texte aus dem DTA gelten die Nutzungsbedingungen des Deutschen Textarchivs.
+Die Metadaten (`metadaten.csv`) stehen unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Die Volltexte unterliegen den jeweiligen Lizenzbedingungen der Quellbestände. Texte aus Project Gutenberg-US und Projekt Gutenberg-DE sind gemeinfrei oder unter der Project Gutenberg License verfügbar; TextGrid-Texte stehen unter CC BY 3.0. Für Texte aus dem DTA gelten die Nutzungsbedingungen des Deutschen Textarchivs.
 
 ---
 
