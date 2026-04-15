@@ -39,10 +39,10 @@ Als Ausgangspunkt der Korpuserstellung dienten vier bereits bestehende Sammlunge
 
 | Basis | Einträge | Beschreibung |
 |---|---|---|
-| DeCorp | 1.558 | Korpus deutschsprachiger Belletristik, hauptsächlich Texte von Projekt Gutenberg-DE |
-| TextGrid Repository | 230 | [textgridrep.org](https://textgridrep.org) – philologisch aufbereitete Editionen |
+| DeCorp | 1.558 | Korpus deutschsprachiger Literatur mit Teilkorpus fiktionaler Texte, basierend auf Gutenberg-DE und Gutenberg-US (Rohrbacher 2025) |
+| TextGrid digitale Bibliothek | 230 | [textgridrep.org](https://textgridrep.org) – digitalisierte Volltexte, basierend auf der zeno.org Bibliothek |
 | Gutenberg-Ergänzung | 226 | Texte von Projekt Gutenberg-DE, die in DeCorp fehlten |
-| Bildungsromankorpus | 19 | Kleine Spezialsammlung; enthält u.a. einzelne Texte aus DTA und BSB |
+| Bildungsromankorpus | 19 | Kuratierte Sammlungen deutschsprachiger sog. Bildungsromane (Boucher et al. 2024) |
 
 *(Die Einträge summieren sich auf mehr als 1.975, da einige Werke in mehreren Sammlungen vorkamen und dedupliziert wurden.)*
 
@@ -152,11 +152,17 @@ Alle Texte liegen als UTF-8-kodierte Klartextdateien (`.txt`) vor. Die Normalisi
 
 ---
 
+## Literaturangaben
+
+
+---
+
 ## Zitation
 
 Wenn Sie RoKo in Ihrer Forschung verwenden, zitieren Sie bitte:
 
 > ...
+(auch decorp und BK zitieren?
 
 ---
 
