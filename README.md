@@ -1,6 +1,6 @@
 # RoKo – Romankorpus deutschsprachiger Romane des langen 19. Jahrhunderts
 
-\[später englisch/]
+\[später englisch]
 
 RoKo ist ein Korpus deutschsprachiger Romane aus dem Zeitraum 1790–1915. Es wurde im Rahmen einer literaturwissenschaftlichen Dissertation erstellt und enthält 1.975 Textdateien von 582 Autor:innen. Zählt man mehrbändige Romane als einen Titel, umfasst das Korpus 1.674 Werke. Das Korpus ist in zwei Teilkorpora gegliedert: ein **Kernkorpus** (669 Einträge) und ein **Erweiterungskorpus** (1.306 Einträge). Insgesamt enthält RoKo fast 163 Millionen Token (ohne Interpunktionszeichen).
 
