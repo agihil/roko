@@ -1,6 +1,6 @@
 # RoKo – Romankorpus deutschsprachiger Romane des langen 19. Jahrhunderts
 
-\[später englisch]
+\[später engl]
 
 RoKo ist ein Korpus deutschsprachiger Romane aus dem Zeitraum 1790–1915. Es wurde im Rahmen einer literaturwissenschaftlichen Dissertation erstellt und enthält 1.975 Textdateien von 582 Autor:innen. Zählt man mehrbändige Romane als einen Titel, umfasst das Korpus 1.674 Werke. Das Korpus ist in zwei Teilkorpora gegliedert: ein **Kernkorpus** (669 Einträge) und ein **Erweiterungskorpus** (1.306 Einträge). Insgesamt enthält RoKo fast 163 Millionen Token (ohne Interpunktionszeichen).
 
@@ -11,7 +11,7 @@ RoKo ist ein Korpus deutschsprachiger Romane aus dem Zeitraum 1790–1915. Es wu
 | Datei/Ordner | Beschreibung |
 |---|---|
 | `metadaten.csv` | Metadaten zu allen 1.975 Einträgen (UTF-8, Komma-separiert) |
-| `texts/` | Volltexte als `.txt`-Dateien (UTF-8), Dateiname = `werk_id` |
+| `texts/` | Volltexte als `.txt`-Dateien (UTF-8), Dateiname = `id` |
 
 ---
 
@@ -50,7 +50,7 @@ Als Ausgangspunkt der Korpuserstellung dienten vier bereits bestehende Sammlunge
 
 ### Volltextquellen
 
-Die tatsächliche Herkunft der Textdateien – d.h. welches digitale Archiv den Volltext bereitstellt – ist in der Metadatenspalte `quelle_detail` dokumentiert:
+Die tatsächliche Herkunft der Textdateien – d.h. welches digitale Archiv den Volltext bereitstellt – ist in der Metadatenspalte `fulltext_source` dokumentiert:
 
 | Quelle | Einträge | URL |
 |---|---|---|
@@ -119,24 +119,24 @@ Die Metadatendatei enthält eine Zeile pro Textdatei (Eintrag) mit folgenden Spa
 
 | Spalte | Beschreibung |
 |---|---|
-| `werk_id` | Eindeutige ID, entspricht dem Dateinamen (ohne `.txt`) |
-| `basis` | Quellbestand (DeCorp, TextGrid, GB-Ergänzung, GB, Bildungsroman) |
-| `teilkorpus` | `Kernkorpus` oder `Erweiterungskorpus` |
-| `gnd_pref_name` | GND-Normname der Autorin/des Autors |
-| `gnd_id` | GND-ID der Autorin/des Autors |
+| `id` | Eindeutige Werk-ID, entspricht dem Dateinamen (ohne `.txt`) |
+| `subcorpus` | `Kernkorpus` oder `Erweiterungskorpus` |
+| `author` | GND-Normname der Autorin/des Autors |
+| `author_gnd_id` | GND-ID der Autorin/des Autors |
 | `title` | Werktitel (Originalschreibung) |
-| `title_normalisiert` | Normalisierter Werktitel (ohne Bandangabe) |
+| `title_normalised` | Normalisierter Werktitel (ohne Bandangabe) |
 | `volume_number` | Bandnummer (leer bei einbändigen Werken) |
-| `follows_after` | `werk_id` des vorherigen Bandes (bei mehrbändigen Werken) |
+| `follows_after` | `id` des vorherigen Bandes (bei mehrbändigen Werken) |
 | `year` | Erstveröffentlichungsjahr |
 | `year_source` | Quelle der Jahresangabe (wenn manuell korrigiert) |
 | `n_tokens` | Tokenanzahl inkl. Interpunktion (spaCy `de_core_news_sm`) |
 | `n_tokens_no_punct` | Tokenanzahl ohne Interpunktionszeichen |
-| `gnd_gender` | Gender laut GND (`m` = männlich, `w`/`f` = weiblich) |
-| `gnd_birth_year` | Geburtsjahr laut GND |
-| `gnd_death_year` | Todesjahr laut GND |
+| `author_gnd_gender` | Gender laut GND (`male`, `female`, `unbekannt`) |
+| `author_gnd_birth_year` | Geburtsjahr laut GND |
+| `author_gnd_death_year` | Todesjahr laut GND |
 | `gnd_geo` | Geografischer Bezug laut GND |
-| `quelle_detail` | Primäre Textquelle (PG-DE, TextGrid, PG-US, DTA usw.) |
+| `base` | Quellbestand (DeCorp, TextGrid, GB-Ergänzung, Bildungsroman, DTA) |
+| `fulltext_source` | Primäre Textquelle (PG-DE, TextGrid, PG-US, DTA usw.) |
 | `filename_orig` | Originaldateiname in der Quellsammlung |
 | `anmerkung` | Manuelle Anmerkungen |
 
