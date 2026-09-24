@@ -1,178 +1,176 @@
-# RoKo – Romankorpus deutschsprachiger Romane des langen 19. Jahrhunderts
+# RoKo (1790-1915)
 
-\[später engl]
 
-RoKo ist ein Korpus deutschsprachiger Romane aus dem Zeitraum 1790–1915. Es wurde im Rahmen einer literaturwissenschaftlichen Dissertation erstellt und enthält 1.975 Textdateien von 582 Autor:innen. Zählt man mehrbändige Romane als einen Titel, umfasst das Korpus 1.674 Werke. Das Korpus ist in zwei Teilkorpora gegliedert: ein **Kernkorpus** (669 Einträge) und ein **Erweiterungskorpus** (1.306 Einträge). Insgesamt enthält RoKo fast 163 Millionen Token (ohne Interpunktionszeichen).
+RoKo is a corpus of German-language novels from the period 1790–1915. It was compiled as part of a doctoral dissertation in literary studies and contains 1,975 text files by 582 authors. Counting multi-volume novels as a single title, the corpus comprises 1,674 works. The corpus is divided into two sub-corpora: a **core corpus** (669 entries) and an **extension corpus** (1,306 entries). In total, RoKo contains almost 163 million tokens (excluding punctuation).
 
 ---
 
-## Inhalt dieses Repositorys
+## Contents of this repository
 
-| Datei/Ordner | Beschreibung |
+| File/Folder | Description |
 |---|---|
-| `metadaten.csv` | Metadaten zu allen 1.975 Einträgen (UTF-8, Komma-separiert) |
-| `texts/` | Volltexte als `.txt`-Dateien (UTF-8), Dateiname = `id` |
+| `metadata.csv` | Metadata for all 1,975 entries (UTF-8, comma-separated) |
+| `texts/` | Full texts as `.txt` files (UTF-8), filename = `id` |
 
 ---
 
-## Korpuskonzeption
+## Corpus design
 
-### Romanbegriff
+### Concept of the novel
 
-RoKo verwendet einen **historischen Romanbegriff**: Maßgeblich ist nicht eine abstrakte, zeitlose Definition, sondern das, was im jeweiligen historischen Moment des Untersuchungszeitraums mit dem Gattungslabel »Roman« veröffentlicht wurde. Als entscheidendes Kriterium gilt das Label der Erstpublikation. Dieser Ansatz orientiert sich am gattungstheoretischen Framework von Julian Schröter, der Gattungsbegriffe als historisch variabel und prototypensemantisch strukturiert modelliert.
+RoKo uses a **historical concept of the novel**: what matters is not an abstract, timeless definition, but what was published under the generic label "novel" (*Roman*) at the respective historical moment within the period under study. The decisive criterion is the genre label of the first publication. This approach follows the genre-theoretical framework of Julian Schröter, who models genre concepts as historically variable and structured along prototype semantics.
 
-Das Korpus setzt vier Merkmale als zentral für den Roman des langen 19. Jahrhunderts: Fiktionalität, Narrativität, Prosaform und ausreichender Umfang. Als Mindesttextlänge gilt ein empirisch ermittelter Schwellenwert von **32.000 Token** (ohne Interpunktionszeichen), der durch eine vergleichende Analyse der Textlängenverteilungen im Kernkorpus und in einem Novellenkorpus (Schröter 2026) gewonnen wurde.
+The corpus treats four features as central to the novel of the long 19th century: fictionality, narrativity, prose form, and sufficient length. The minimum text length is an empirically determined threshold of **32,000 tokens** (excluding punctuation), derived from a comparative analysis of text-length distributions in the core corpus and in a corpus of novellas (Schröter 2026).
 
-### Zweiteilige Struktur
+### Two-part structure
 
-Das Korpus ist in zwei Teilkorpora gegliedert:
+The corpus is divided into two sub-corpora:
 
-- **Kernkorpus:** Texte, die explizit als Romane publiziert wurden – d.h. die das Gattungslabel »Roman« (oder eine Subgattungsbezeichnung wie »historischer Roman«, »Briefroman« etc.) im Paratext tragen. Das Kernkorpus dient als empirische Grundlage für die Bestimmung des historischen Prototypen der Gattung.
+- **Core corpus:** texts that were explicitly published as novels – i.e. that carry the generic label "Roman" (or a subgenre designation such as "historical novel", "epistolary novel", etc.) in the paratext. The core corpus serves as the empirical basis for determining the historical prototype of the genre.
 
-- **Erweiterungskorpus:** Texte, die zwar nicht oder unter einem verwandten Label (»Novelle«, »Erzählung« u.ä.) publiziert wurden, die aber hinsichtlich ihrer Merkmale nah genug am durch das Kernkorpus definierten Prototypen liegen, um als Teil der zeitgenössischen Romanlandschaft gelten zu können. Es handelt sich also um fiktionale, narrative Prosatexte von mindestens 32.000 Token.
+- **Extension corpus:** texts that were not published under this label, or were published under a related label ("novella", "story", etc.), but which are close enough in their features to the prototype defined by the core corpus to count as part of the contemporary landscape of novel production. These are, accordingly, fictional, narrative prose texts of at least 32,000 tokens.
 
 ---
 
-## Korpuserstellung
+## Corpus construction
 
-### Korpusbasis
+### Corpus basis
 
-Als Ausgangspunkt der Korpuserstellung dienten vier bereits bestehende Sammlungen, aus denen Kandidatenlisten gewonnen wurden:
+Four existing collections served as the starting point for corpus construction, from which candidate lists were drawn:
 
-| Basis | Einträge | Beschreibung |
+| Basis | Entries | Description |
 |---|---|---|
-| DeCorp | 1.558 | Korpus deutschsprachiger Literatur mit Teilkorpus fiktionaler Texte, basierend auf Gutenberg-DE und Gutenberg-US (Rohrbacher 2025) |
-| TextGrid digitale Bibliothek | 230 | [textgridrep.org](https://textgridrep.org) – digitalisierte Volltexte, basierend auf der zeno.org Bibliothek |
-| Gutenberg-Ergänzung | 226 | Texte von Projekt Gutenberg-DE, die in DeCorp fehlten |
-| Bildungsromankorpus | 19 | Kuratierte Sammlungen deutschsprachiger sog. Bildungsromane (Boucher et al. 2024) |
+| DeCorp | 1,558 | Corpus of German-language literature with a sub-corpus of fictional texts, based on Gutenberg-DE and Gutenberg-US (Rohrbacher 2025) |
+| TextGrid Digital Library | 230 | [textgridrep.org](https://textgridrep.org) – digitized full texts, based on the zeno.org library |
+| Gutenberg supplement | 226 | Texts from Project Gutenberg-DE missing from DeCorp |
+| Bildungsroman corpus | 19 | Curated collection of German-language so-called *Bildungsromane* (Boucher et al. 2024) |
 
-*(Die Einträge summieren sich auf mehr als 1.975, da einige Werke in mehreren Sammlungen vorkamen und dedupliziert wurden.)*
+*(The entries add up to more than 1,975, since some works appeared in several collections and were deduplicated.)*
 
-### Volltextquellen
+### Full-text sources
 
-Die tatsächliche Herkunft der Textdateien – d.h. welches digitale Archiv den Volltext bereitstellt – ist in der Metadatenspalte `fulltext_source` dokumentiert:
+The actual provenance of the text files – i.e. which digital archive provides the full text – is documented in the metadata column `fulltext_source`:
 
-| Quelle | Einträge | URL |
+| Source | Entries | URL |
 |---|---|---|
-| Projekt Gutenberg-DE | 1.573 | [projekt-gutenberg.org](https://www.projekt-gutenberg.org) |
+| Project Gutenberg-DE | 1,573 | [projekt-gutenberg.org](https://www.projekt-gutenberg.org) |
 | TextGrid Repository | 224 | [textgridrep.org](https://textgridrep.org) |
 | Project Gutenberg-US | 148 | [gutenberg.org](https://www.gutenberg.org) |
 | Deutsches Textarchiv (DTA) | 22 | [deutschestextarchiv.de](https://www.deutschestextarchiv.de) |
-| Sonstige | 8 | BYU Scholars Archive, BSB u.a. |
+| Other | 8 | BYU Scholars Archive, BSB, and others |
 
-### Vorgehen
+### Procedure
 
-#### Schritt 1: Kandidatenlisten aus den Quellbeständen
+#### Step 1: Candidate lists from the source collections
 
-Für jeden Quellbestand wurden die verfügbaren Metadaten ausgelesen und gefiltert. Romankandidaten für das Kernkorpus wurden über zwei Signale identifiziert: (1) Roman-Bezeichnungen im Titel (Regex-basiert) und (2) Roman-Bezeichnungen im Textanfang (erste 2.500 Zeichen). Die resultierenden Kandidatenlisten wurden manuell geprüft und mit Entscheidungsvoten versehen.
+For each source collection, the available metadata was extracted and filtered. Novel candidates for the core corpus were identified via two signals: (1) novel designations in the title (regex-based) and (2) novel designations at the start of the text (first 2,500 characters). The resulting candidate lists were checked manually and annotated with decision votes.
 
-#### Schritt 2: Kern- und Erweiterungskorpus
+#### Step 2: Core and extension corpus
 
-Beim **Kernkorpus** galt: Aufnahme, wenn ein Text als Roman publiziert wurde (Gattungslabel im Paratext). Beim **Erweiterungskorpus** galt: Aufnahme, wenn ein Text trotz fehlendem oder anderslautendem Gattungslabel die Merkmale des Romanprototypen erfüllt. Die Entscheidung beruhte auf einer Kombination aus automatischer Vorauswahl und manueller Prüfung.
+For the **core corpus**, the rule was: include if a text was published as a novel (generic label in the paratext). For the **extension corpus**, the rule was: include if a text meets the features of the novel prototype despite a missing or differently worded generic label. The decision was based on a combination of automatic pre-selection and manual review.
 
-Für mehrbändige Romane gilt: Ist ein Band einer Reihe im Korpus, werden alle übrigen Bände derselben Reihe automatisch ergänzt.
+For multi-volume novels: if one volume of a series is in the corpus, all remaining volumes of the same series are automatically added.
 
-#### Schritt 3: Zusammenführung zum Gesamtkorpus
+#### Step 3: Merging into the overall corpus
 
-Kernkorpus und Erweiterungskorpus wurden zu einem Gesamtkorpus zusammengeführt und Duplikate entfernt.
+The core corpus and the extension corpus were merged into an overall corpus, and duplicates were removed.
 
-#### Schritt 4: Bereinigung
+#### Step 4: Cleaning
 
-Metadaten und Bestand wurden umfassend in mehreren Schritten gesäubert. Bei der schieren Menge der Daten ist trotzdem noch mit Fehlern zu rechnen.
+Metadata and holdings were extensively cleaned in several steps. Given the sheer volume of data, some errors are still to be expected.
 
-#### Schritt 5: Werk-IDs und Dateinamen
+#### Step 5: Work IDs and filenames
 
-Jedes Werk erhält eine eindeutige **Werk-ID** nach dem Schema `Nachname_Kurztitel` (bei mehrbändigen Werken mit angehängter Bandnummer). Der Nachname folgt dem GND-Normnamen; der Kurztitel ergibt sich aus den großgeschriebenen Inhaltswörtern des Haupttitels. Beispiele:
+Each work is assigned a unique **work ID** following the scheme `Surname_ShortTitle` (with an appended volume number for multi-volume works). The surname follows the GND authority name; the short title is derived from the capitalized content words of the main title. Examples:
 
 - *Der falsche Woldemar* (Willibald Alexis) → `Alexis_Woldemar`
 - *Das Landhaus am Rhein, Band V* (Berthold Auerbach) → `Auerbach_Landhaus_5`
 - *Leute aus dem Walde* (Wilhelm Raabe) → `Raabe_Leute`
 
-Die Volltext-Dateien sind unter dieser ID im Ordner `texts/` abgelegt.
+The full-text files are stored under this ID in the `texts/` folder.
 
 ---
 
-## Korpusbeschreibung
+## Corpus description
 
-### Umfang
+### Scope
 
-- **1.975 Einträge** (Textdateien), davon 669 Kern- und 1.306 Erweiterungskorpus
-- **1.674 Werke** (mehrbändige Romane als ein Titel gezählt)
-- **582 Autor:innen** (identifiziert über GND-IDs)
-- Zeitraum: **1790–1915**
-- Tokenumfang: **~163 Millionen Token** (ohne Interpunktionszeichen, tokenisiert mit spaCy `de_core_news_sm`)
-- Mittlere Textlänge: ~82.700 Token; Median: ~67.700 Token
+- **1,975 entries** (text files), of which 669 are core corpus and 1,306 extension corpus
+- **1,674 works** (multi-volume novels counted as one title)
+- **582 authors** (identified via GND IDs)
+- Period: **1790–1915**
+- Token count: **~163 million tokens** (excluding punctuation, tokenized with spaCy `de_core_news_sm`)
+- Mean text length: ~82,700 tokens; median: ~67,700 tokens
 
-### Autor:innen
+### Authors
 
-Von den 582 Autor:innen sind laut GND 117 weiblich (ca. 20%) und 369 männlich (ca. 63%); für die übrigen liegt kein Gendereintrag in der GND vor. Die Verteilung der Werke auf die Autor:innen ist stark rechtschief: 47% der Autor:innen sind mit nur einem einzigen Werk vertreten. Die produktivsten Autor:innen sind Karl May (68 Werke), Friedrich Gerstäcker (42) und Friedrich Spielhagen (40).
+Of the 582 authors, according to GND, 117 are female (approx. 20%) and 369 male (approx. 63%); for the remainder, no gender entry is available in the GND. The distribution of works across authors is strongly right-skewed: 47% of authors are represented with only a single work. The most productive authors are Karl May (68 works), Friedrich Gerstäcker (42), and Friedrich Spielhagen (40).
 
-### Zeitliche Verteilung
+### Temporal distribution
 
-Die Zahl der Texte steigt über den Untersuchungszeitraum an, mit einem deutlichen Wachstum ab der Mitte des 19. Jahrhunderts. Die produktivste Dekade ist die 1900er Jahre. Die ersten Dekaden (1790–1819) sind mit 112 Titeln schwächer vertreten.
+The number of texts increases over the period under study, with marked growth from the mid-19th century onward. The most productive decade is the 1900s. The earliest decades (1790–1819) are more weakly represented, with 112 titles.
 
 ---
 
-## Metadaten (`metadaten.csv`)
+## Metadata (`metadata.csv`)
 
-Die Metadatendatei enthält eine Zeile pro Textdatei (Eintrag) mit folgenden Spalten:
+The metadata file contains one row per text file (entry) with the following columns:
 
-| Spalte | Beschreibung |
+| Column | Description |
 |---|---|
-| `id` | Eindeutige Werk-ID, entspricht dem Dateinamen (ohne `.txt`) |
-| `subcorpus` | `Kernkorpus` oder `Erweiterungskorpus` |
-| `author` | GND-Normname der Autorin/des Autors |
-| `author_gnd_id` | GND-ID der Autorin/des Autors |
-| `title` | Werktitel (Originalschreibung) |
-| `title_normalised` | Normalisierter Werktitel (ohne Bandangabe) |
-| `volume_number` | Bandnummer (leer bei einbändigen Werken) |
-| `follows_after` | `id` des vorherigen Bandes (bei mehrbändigen Werken) |
-| `year` | Erstveröffentlichungsjahr |
-| `year_source` | Quelle der Jahresangabe (wenn manuell korrigiert) |
-| `n_tokens` | Tokenanzahl inkl. Interpunktion (spaCy `de_core_news_sm`) |
-| `n_tokens_no_punct` | Tokenanzahl ohne Interpunktionszeichen |
-| `author_gnd_gender` | Gender laut GND (`male`, `female`, `unbekannt`) |
-| `author_gnd_birth_year` | Geburtsjahr laut GND |
-| `author_gnd_death_year` | Todesjahr laut GND |
-| `gnd_geo` | Geografischer Bezug laut GND |
-| `base` | Quellbestand (DeCorp, TextGrid, GB-Ergänzung, Bildungsroman, DTA) |
-| `fulltext_source` | Primäre Textquelle (PG-DE, TextGrid, PG-US, DTA usw.) |
-| `filename_orig` | Originaldateiname in der Quellsammlung |
-| `anmerkung` | Manuelle Anmerkungen |
+| `id` | Unique work ID, corresponds to the filename (without `.txt`) |
+| `subcorpus` | `Kernkorpus` (core corpus) or `Erweiterungskorpus` (extension corpus) |
+| `author` | GND authority name of the author |
+| `author_gnd_id` | GND ID of the author |
+| `title` | Work title (original spelling) |
+| `title_normalised` | Normalised work title (without volume information) |
+| `volume_number` | Volume number (empty for single-volume works) |
+| `follows_after` | `id` of the preceding volume (for multi-volume works) |
+| `year` | Year of first publication |
+| `year_source` | Source of the year (if manually corrected) |
+| `n_tokens` | Token count including punctuation (spaCy `de_core_news_sm`) |
+| `n_tokens_no_punct` | Token count excluding punctuation |
+| `author_gnd_gender` | Gender according to GND (`male`, `female`, `unbekannt` [unknown]) |
+| `author_gnd_birth_year` | Year of birth according to GND |
+| `author_gnd_death_year` | Year of death according to GND |
+| `gnd_geo` | Geographic association according to GND |
+| `base` | Source collection (DeCorp, TextGrid, GB supplement, Bildungsroman, DTA) |
+| `fulltext_source` | Primary text source (PG-DE, TextGrid, PG-US, DTA, etc.) |
+| `filename_orig` | Original filename in the source collection |
+| `anmerkung` | Manual annotations (filled for 215 of the 1,975 entries), mostly bibliographic information on the first print (place, publisher, year), and occasionally notes on incomplete sources, publication history (e.g. prior serialisation in a journal, censorship), or name inconsistencies within the text |
 
 ---
 
-## Textdateien
+## Text files
 
-Alle Texte liegen als UTF-8-kodierte Klartextdateien (`.txt`) vor. Die Normalisierung umfasst:
+All texts are provided as UTF-8-encoded plain text files (`.txt`). Normalisation includes:
 
-- Extraktion des Fließtexts aus den Quellformaten (HTML bei Gutenberg, XML/TEI bei TextGrid und DTA)
-- Entfernung von Metadaten, Inhaltsverzeichnissen, editorischen Apparaten und Paratexten soweit möglich
-- Normalisierung von Fraktur-OCR-Artefakten: `ſ` → `s`, `ʒ` → `z`, Vokal + Combining-e → Umlaut
-- Normalisierung von Leerzeichen (schmale geschützte Leerzeichen, Non-breaking spaces)
-- Tokenisierung mit spaCy (`de_core_news_sm`)
-
----
-
-## Literaturangaben
-
+- Extraction of the running text from the source formats (HTML for Gutenberg, XML/TEI for TextGrid and DTA)
+- Removal of metadata, tables of contents, editorial apparatus, and paratexts as far as possible
+- Normalisation of Fraktur OCR artefacts: `ſ` → `s`, `ʒ` → `z`, vowel + combining e → umlaut
+- Normalisation of whitespace (narrow no-break spaces, non-breaking spaces)
+- Tokenisation with spaCy (`de_core_news_sm`)
 
 ---
 
-## Zitation
+## References
 
-Wenn Sie RoKo in Ihrer Forschung verwenden, zitieren Sie bitte:
+
+---
+
+## Citation
+
+If you use RoKo in your research, please cite:
 
 > ...
-(auch decorp und BK zitieren?
+(also cite DeCorp and BK?)
 
 ---
 
-## Lizenz
+## License
 
-Die Metadaten (`metadaten.csv`) stehen unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Die Volltexte unterliegen den jeweiligen Lizenzbedingungen der Quellbestände. Texte aus Project Gutenberg-US und Projekt Gutenberg-DE sind gemeinfrei oder unter der Project Gutenberg License verfügbar; TextGrid-Texte stehen unter CC BY 3.0. Für Texte aus dem DTA gelten die Nutzungsbedingungen des Deutschen Textarchivs.
+The metadata (`metadata.csv`) is available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The full texts are subject to the respective licence terms of the source collections. Texts from Project Gutenberg-US and Projekt Gutenberg-DE are in the public domain or available under the Project Gutenberg License; TextGrid texts are available under CC BY 3.0. Texts from the DTA are subject to the terms of use of the Deutsches Textarchiv.
 
 ---
 
 ## Changelog
-
