@@ -8,7 +8,7 @@ RoKo is not yet perfect, and neither is this documentation. The background to sp
 
 If you use RoKo in your research, please cite it as follows:
 
-Hilger, Agnes: RoKo – A Large Corpus of German-language Novels (1790–1915), version 1.0, 2026. Zenodo. https://doi.org/[DOI]
+Hilger, Agnes: RoKo – A Large Corpus of German-language Novels (1790–1915), version 1.0, 2026. Zenodo. https://doi.org/https://doi.org/10.5281/zenodo.23539456
 
 Please also acknowledge the sources RoKo draws on: Projekt Gutenberg-DE, Project Gutenberg, the Deutsches Textarchiv (DTA), TextGrid, and the following corpora:
 
